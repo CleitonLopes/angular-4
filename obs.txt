@@ -22,3 +22,7 @@ Angular-4
 4 arquivos, component.css, component.html, component.spec.ts, component.ts e
 já faz o include no app.module.ts
 
+* Propriedades reativas ou property binding
+
+- Criando classes para organizar as variaveis
+
