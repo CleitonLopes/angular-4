@@ -1,0 +1,19 @@
+Angular-4
+---------
+
+* Para rodar o server na maquina local pelo vagrant no guest rodar
+
+- ng serve --host 192.168.33.10
+
+- no navegador acessar 192.168.33.10:4200 // 4200 porta padrão do angular
+
+------------------------------------------------------------------------------------------
+
+- npm i -g @angular/cli - depois de instalado usar o comando ng no bash
+
+* Gerando aplicação
+
+- ng new project - cria um novo projeto
+
+
+
