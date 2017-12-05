@@ -16,4 +16,9 @@ Angular-4
 - ng new project - cria um novo projeto
 
 
+* Criando componentes
+
+- ng g component task-list - cria a folder com o nome do componente e
+4 arquivos, component.css, component.html, component.spec.ts, component.ts e
+já faz o include no app.module.ts
 
