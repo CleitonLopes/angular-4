@@ -1,27 +1,28 @@
 import { Component } from '@angular/core';
 import { Task } from '../task'
-
+import {TaskService} from "../task.service";
 
 @Component({
+
   selector: 'app-task-list', // tag para chamar no html
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.css']
+
 })
+
 export class TaskListComponent {
 
-    tasks = [];
+    tasks:Array<Task>;
 
-    task: Task = {
+    // cria uma variavel private já recebendo o service criado
+    constructor(private taskService:TaskService) {
 
-        name: "",
-        value: 0
+        this.taskService.tasks.push(
 
-    };
+            { name: 'teste', value: 10, date_launch: '2017-12-06' }
+        )
 
-    add () {
-
-        let task = Object.assign({}, this.task)
-        this.tasks.push(task);
+        this.tasks = this.taskService.tasks;
 
     }
 

@@ -1,9 +1,51 @@
 
-<input type="text" [(ngModel)]="task.name">
-<input type="text" [(ngModel)]="task.value">
+<!--<ul>-->
 
-<button type="button" (click)="add()">Save Task</button>
+  <!--<li  [id]="'list-' + item.name"-->
+  <!--[style.color] = "item.value > 5 ? 'blue' : 'red'"-->
+  <!--*ngFor="let item of tasks" [innerHtml]="item.name">-->
+  <!--</li>-->
+
+  <!--<li  [id]="'list-' + item.name"-->
+  <!--[ngClass] = "{'item-blue': item.value > 5, 'item-red': item.value < 5}"-->
+  <!--*ngFor="let item of tasks" [innerHtml]="item.name">-->
+  <!--</li>-->
+
+  <!--<li *ngFor="let item of tasks" [myTask]="item">-->
+  <!--{{ item.name | uppercase }}-->
+  <!--</li>-->
+
+  <!--&lt;!&ndash;Altera só o primeiro parametro para uppercase&ndash;&gt;-->
+  <!--<li *ngFor="let item of tasks">-->
+  <!--{{( item.name | uppercase )}} - {{ item.value | formatCurrency }}-->
+  <!--</li>-->
+
+  <!--<li *ngFor="let item of tasks">-->
+  <!--{{( item.name | uppercase )}} - {{ item.value | formatCurrency }}-->
+  <!--</li>-->
+
+  <!--<li *ngFor="let item of tasks">-->
+  <!--{{ item.date_launch | formatDate:'en-US' }}-->
+  <!--</li>-->
+
+  <!--<li *ngFor="let item of tasks" [innerHtml]="item.name | uppercase"></li>-->
+
+<!--</ul>-->
 
 <ul>
-  <li *ngFor="let item of tasks">{{item.name}} + {{item.value}}</li>
+
+  <li *ngFor="let item of tasks" [myTask]="item">
+
+    {{
+
+        (item.name | uppercase) + ' - ' +
+        (item.value | formatCurrency) + ' - ' +
+        (item.date_launch | formatDate:'en-US')
+
+    }}
+
+  </li>
+
 </ul>
+
+<p></p>
